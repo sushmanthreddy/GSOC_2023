@@ -118,8 +118,8 @@ class NSNTrainer():
                 bestEpoch = epoch
                 # Save Model
                 if epoch > 0:
-                    model_name = 'NSN_bestIoU.npz'
-                    torch.save(self.model.to('cpu'), os.path.join(self.opbase, model_name))
+                    model_name = 'NSN_bestIoU.pth'
+                    torch.save(self.model.state_dict(), os.path.join(self.opbase, model_name))
                     self.model.to(torch.device(self.gpu))
                 else:
                     bestIoU = 0.0
@@ -377,8 +377,8 @@ class NDNTrainer():
                 bestFmeasure = teseval['F-measure']
                 bestEpoch = epoch
                 # Save Model
-                model_name = 'NDN_bestFmeasure.npz'
-                torch.save(self.model.to('cpu'), os.path.join(self.opbase, model_name))
+                model_name = 'NDN_bestFmeasure.pth'
+                torch.save(self.model.state_dict(), os.path.join(self.opbase, model_name))
                 self.model.to(torch.device(self.gpu))
 
             if bestIoU <= teseval['IoU']:
