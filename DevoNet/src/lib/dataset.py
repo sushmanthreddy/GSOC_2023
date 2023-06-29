@@ -23,7 +23,7 @@ def read_img(path, arr_type="npz"):
     if arr_type == "npz":
         image = np.load(path)["arr_0"]
     elif arr_type in ("png", "jpg"):
-        image = imread(path, mode="L")
+        image = io.imread(path, mode="L")
     elif arr_type == "tif":
         image = io.imread(path)
     else:
