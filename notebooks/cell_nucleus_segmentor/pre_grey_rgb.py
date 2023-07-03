@@ -20,14 +20,14 @@ parser.add_argument(
     "-i",
     "--img_path",
     type=str,
-    default="data/MedSAMDemo_2D/train/images",
+    default="data/nucleus_data/train/images",
     help="path to the images",
 )
 parser.add_argument(
     "-gt",
     "--gt_path",
     type=str,
-    default="data/MedSAMDemo_2D/train/labels",
+    default="data/nucleus_data/train/labels",
     help="path to the ground truth (gt)",
 )
 
