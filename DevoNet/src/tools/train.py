@@ -27,7 +27,7 @@ seed = 109
 
 def main():
 
-    """ Implementation of Quantitative Criteria Acquisition Network based on PyTorch """
+    """ Implementation of  Network based on PyTorch """
     start_time = time.time()
 
     ''' ConfigParser '''
