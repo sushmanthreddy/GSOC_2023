@@ -66,17 +66,6 @@ def get_model(args):
             gpu=args.gpu,
             loss_func=args.lossfun
         )
-    elif args.model == '3DUNet':
-        model = Model_L3(
-            ndim=args.ndim,
-            n_class=args.ch_out,
-            init_channel=args.ch_base,
-            kernel_size=3,
-            pool_size=2,
-            ap_factor=2,
-            gpu=args.gpu,
-            loss_func=args.lossfun
-        )
     else:
         print('Error: specify learning model name!')
         sys.exit()

@@ -147,7 +147,7 @@ def main():
         c.writerow(['Epoch', 'Accuracy', 'Recall', 'Precision', 'Specificity', 'F-measure', 'IoU'])
 
     mean_image = None
-    if args.model == 'NSN' or args.model == '3DUNet':
+    if args.model == 'NSN':
         trainer = NSNTrainer(
             model=model,
             epoch=args.epoch,

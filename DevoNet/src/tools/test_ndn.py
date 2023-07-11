@@ -16,7 +16,7 @@ from argparse import ArgumentParser
 import torch
 
 sys.path.append(os.getcwd())
-from DevoNet.src.lib.model import Model_L2, Model_L3, Model_L4
+from DevoNet.src.lib.model import Model_L2, Model_L4
 from DevoNet.src.lib.utils import mirror_extension_image
 
 

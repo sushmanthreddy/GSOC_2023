@@ -26,7 +26,7 @@ from DevoNet.src.lib.utils import print_args
 from DevoNet.src.lib.utils import get_model
 from DevoNet.src.tools.test_nsn import TestNSN
 from DevoNet.src.tools.test_ndn import TestNDN
-from DevoNet.src.lib.model import Model_L2, Model_L3, Model_L4
+from DevoNet.src.lib.model import Model_L2, Model_L4
 
 def main():
 
