@@ -190,6 +190,10 @@ This code defines a neural network model called `Model_L2` for a 3D image segmen
 
 Overall, this code defines a model with an encoder-decoder architecture for 3D image segmentation. It performs convolutions and pooling operations to extract features from the input data and then uses transposed convolutions to upsample the features and generate the final segmentation output.
 
+Here model takes features from segmentation masks and does the segmentation 
+
+<img src="assets/cellsegmentor_sam/Screenshot 2023-06-06 at 10.14.11 AM.png" width=500/>
+
 ### NDN model
 
 ```
@@ -346,11 +350,23 @@ The key difference between `Model_L2` and `Model_L4` is the additional convoluti
 
 Overall, `Model_L4` is a more sophisticated variant of the original model, offering increased representational capacity through the inclusion of additional layers while maintaining the general architecture and functionality of `Model_L2`.
 
+The model is more sophistcated because of the images have less features to extract , Here model extracts the points from the image.
+
+<img src="assets/cellsegmentor_sam/Screenshot 2023-06-06 at 10.16.12 AM.png" width=500/>
+
 ## Loss Function :
 
 The most commonly used loss functions for segmentation are based on either the cross entropy loss, Dice loss or a combination of the two. We propose the Unified Focal loss, a new hierarchical framework that generalises Dice and cross entropy-based losses for handling class imbalance
 
 My choice would be the Dice loss.
+
+## Image processing in DevoNet
+
+The watershed is a classical algorithm used for segmentation, that is, for separating different objects in an image.
+
+Starting from user-defined markers, the watershed algorithm treats pixels values as a local topography (elevation). The algorithm floods basins from the markers until basins attributed to different markers meet on watershed lines. In many cases, markers are chosen as local minima of the image, from which basins are flooded.
+
+<img src="assets/cellsegmentor_sam/Screenshot 2023-07-12 at 9.55.42 PM.png" width=500/>
 
 # Next phase DevoNet
 
